@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+body {
+    position: fixed;
+    transition: background-color .5s;
+}
+
+/**SIDE NAV CODE BY w3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.452);
+}
+
+.sidenav a {
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#mySidenavContainer {
+    display: grid;
+    grid-template-rows: 200px auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#mySidenavContainer > #profileBackground {
+    display: grid;
+    grid-template-rows: auto;
+    background-image: url(https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ece92f41f4c83000768d787%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D421%26cropX2%3D1694%26cropY1%3D37%26cropY2%3D1310);
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#profile {
+    display: grid;
+    grid-template-rows: 70px 60px auto auto;
+    backdrop-filter: blur(8px); 
+    padding-left: 15px;
+}
+
+#profilePic {
+    margin-top: -15px;
+    width: 30%;
+    height: 65px;
+    border-radius: 100%;
+}
+
+#profileName {
+    margin-top: 8px;
+    color: white;
+}
+
+#profileEmail {
+    color: white;
+    margin-top: -17px;
+    font-size: 12pt;
+}
+
+#mySidenavContents {
+    background-color: white;
+    text-overflow: ellipsis; /*CODE TO KEEP FONTS ALL IN ONE LINE: NO BREAKING*/
+    white-space: pre;
+    padding: 0px;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Used hiding scroll: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+#mySidenavContents::-webkit-scrollbar {
+    display: none;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/******************END OF NAV BAR CODE************************/
+
+#InnerContainer {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+#headingContainer {
+    display: grid;
+    grid-template-columns: auto auto 60px;
+    height: 70px;
+
+}
+
+#hamburgerMenu {
+    column-width: 60px;
+    background-color: rgb(175, 175, 175);
+    padding-top: 10px;
+    cursor: pointer; 
+}
+
+#menu {
+    margin-left: 5px;
+}
+
+#menuIcon { 
+    padding-right: 30px;
+    margin-top: -7px;
+}
+
+#logOutIcon { 
+    padding-right: 30px;
+    margin-top: -7px;
+}
+
+#title {
+    display: block;
+    padding-top: 15px;
+    text-align: center;
+    column-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(175, 175, 175);
+}
+
+#title-font {
+    font-size: 20pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+#homeButtonContainer {
+    background-color: rgb(175, 175, 175);
+}
+
+#actualHomeButton { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9px;
+    padding-left: 10px;
+}
+
+#actualHomeButton:hover {
+    cursor: pointer;
+}
+
+/* Used hiding scroll: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+#postContainer {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgb(75, 75, 75);
+    height: 650px; 
+    overflow: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    margin-top: 25px;
+}
+
+/* Used hiding scroll: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+#postContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#post {
+    display: grid;
+    grid-template-rows: 30px auto auto auto 35px; /*REVISE?*/
+    border: 1px solid rgb(107, 107, 107);
+    /*ADD SOMETHING HERE? (Height auto?): 
+    Objective: To let the size of post overflow, but keep post box same?*/
+}
+
+#postImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    overflow:hidden;
+    position:relative;
+}
+
+#postImage > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:100%;
+    max-height:100%;
+}
+
+#dateAndUserContainer {
+    display: grid;
+    grid-template-columns: 130px auto auto;
+    margin-top: 12px;
+}
+
+#userNamePosted {
+    padding-left: 9px;
+}
+
+#picture > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+#postTitle {
+    font-size: 20px; /*EDIT THIS FOR adaptive resolution*/
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: 900;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+#postBody {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+}
+
+#like-LoveContainer {
+    display: grid;
+    grid-template-columns: 50px 50px 50px auto;
+}
+
+#heart {
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+#smile {
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+#notSmile {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+/************COMMENT STYLING**************/
+#comment {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    border: 1px solid rgb(107, 107, 107);
+}
+
+#commentTextContainer {
+    padding-left: 50px;
+    margin-top: -12px;
+}
+
+#dateAndUserContainer2 {
+    display: grid;
+    grid-template-columns: 40px 130px auto auto;
+    margin-top: 12px;
+}
+
+#like-replyContainer {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    height: 50px;
+}
+
+#smile2 {
+    padding-top: 13px;
+    padding-left: 10px;
+}
+
+#notSmile2 {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+/* Button Shadow Effect: https://codepen.io/_elletownsend/pen/abZobbJ */
+.replyButton {
+    display: none;
+    text-align: center;
+    background-color: rgb(121, 121, 121); /* For browsers that do not support gradients */
+    padding-top: 5px;
+    margin-top: 13px;
+    border-radius: 10px 10px 10px 10px; 
+    height: 25px;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 5px #494949;
+}
+
+.replyButton:hover {
+    background-color: rgb(67, 135, 212); /* For browsers that do not support gradients */
+    box-shadow: 0 3px #494949;
+	transform: translateY(1px);
+}
+
+.replyButton:active {
+    box-shadow: 0 5px #303030;
+	transform: translateY(4px);
+}
+
+.deleteButton {
+    display: none; 
+    text-align: center;
+    background-color: rgb(121, 121, 121); /* For browsers that do not support gradients */
+    padding-top: 5px;
+    margin-top: 13px;
+    margin-left: 20px;
+    width: 60px;
+    border-radius: 10px 10px 10px 10px; 
+    height: 25px;
+    color: rgb(255, 255, 255);
+	box-shadow: 0 5px #494949;
+}
+
+.deleteButton:hover {
+    background-color:rgb(255, 0, 0);
+	box-shadow: 0 3px #494949;
+	transform: translateY(1px);
+}
+
+.deleteButton:active {
+	box-shadow: 0 5px #303030;
+	transform: translateY(4px);
+}
+
+.deleteButtonUserPost { 
+    text-align: center;
+    background-color: rgb(121, 121, 121); /* For browsers that do not support gradients */
+    padding-top: 5px;
+    margin-left: 10px;
+    width: 60px;
+    border-radius: 10px 10px 10px 10px; 
+    height: 25px;
+    color: rgb(255, 255, 255);
+	box-shadow: 0 5px #494949;
+}
+
+.deleteButtonUserPost:hover {
+    background-color:rgb(255, 0, 0);
+	box-shadow: 0 3px #494949;
+	transform: translateY(1px);
+}
+
+.deleteButtonUserPost:active {
+	box-shadow: 0 5px #303030;
+	transform: translateY(4px);
+}
+
+#userCommentPic {
+    padding-left: 10px;
+}
+
+#userCommentPic > img {
+    border-radius: 100%;
+}
+
+#userNamePosted2 {
+    padding-left: 10px;
+    color: black;
+}
+
+#datePosted2 {
+    color: black;
+}
+/************END OF COMMENT STYLING************/
+
+#lowerNavContainer{
+    height: 100px;
+    padding-top: 40px;
+    background-color: rgb(175, 175, 175);
+}
+
+/* Gradient code from https://www.w3schools.com/css/css3_gradients.asp */
+#postButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(67, 135, 212); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(0, 143, 238) , rgb(0, 98, 190));
+    margin-top: -20px;
+    padding-top: 16px;
+    height: 55px;
+    border-radius: 20px 20px 20px 20px; 
+    width: 50%;
+}
+
+#postButton:hover {
+    color:white;
+    cursor: pointer; 
+    text-decoration: underline;
+    /* NOTE: Text shadow edits from left to right: xyz directions */
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(78, 161, 255), 0 0 50px darkgoldenrod;
+}
+
+#postButton a:visited {
+    color:white;
+    cursor: pointer; 
+    /* NOTE: Text shadow edits from left to right: xyz directions */
+}
+
+
+#postButtonFont {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/************ MODAL STYLING ***********/
+.modal-content {
+    height: 325px;
+    margin-top: 100px;
+}
+
+.modal-header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#editButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(67, 135, 212); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(0, 143, 238) , rgb(0, 98, 190));
+    padding-top: 8px;
+    height: 55px;
+    border-radius: 20px 20px 20px 20px; 
+    width: 35%;
+    color: white;
+}
+
+#editButton:hover {
+    color:white;
+    cursor: pointer; 
+    text-decoration: underline;
+    /* NOTE: Text shadow edits from left to right: xyz directions */
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(78, 161, 255), 0 0 50px darkgoldenrod;
+}
+
+#editButtonFont {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#submitButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(48, 216, 132); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(0, 250, 125) , rgb(43, 197, 125));
+    padding-top: 8px;
+    height: 55px;
+    border-radius: 20px 20px 20px 20px; 
+    width: 35%;
+    color: white;
+}
+
+#submitButton > a:link {
+    color: white;
+}
+
+
+.deleteButton2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(48, 216, 132); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(0, 250, 125) , rgb(43, 197, 125));
+    padding-top: 8px;
+    height: 55px;
+    border-radius: 20px 20px 20px 20px; 
+    width: 35%;
+    color: white;
+}
+
+.deleteButton2 > a:link {
+    color: white;
+}
+
+.modal-body2 {
+    color: black;
+    height: 300px;
+}
+
+.modal-body2 > p {
+    font-size: 12pt;
+    text-align: center;
+}
+
+.modal-title2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 23pt;
+    padding-top: 5px;
+    color: black;
+}
+
+#myModalEdit {
+    color: black;
+    height: 500px;
+}
+
+.modal-titleEdit {
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+/********TEXT AREA BOOTSTRAP STYLING*******/
+#textBody {
+    width: 100%;
+    min-height: 110px;
+    resize: none;
+    color: #666;
+    font-size: 12pt;
+    border: none;
+  
+  }
+  
+  #the-count {
+    float: right;
+    padding: 0.1rem 0 0 0;
+    font-size: 0.875rem;
+  }
+
+/************DROPDOWN CSS*************/
+.dropbtn {
+    background-color: rgb(175, 175, 175);
+    color: white;
+    padding: 16px;
+    margin-top: 12px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(175, 175, 175);
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    margin-top: 10px;
+    right: 2px;
+    overflow: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .show {display: block;}
+
+  .twitter-follow-button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .twitter-share-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  

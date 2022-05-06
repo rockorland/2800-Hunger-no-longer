@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        display: block;
+        position: fixed;
+        top: 100px;
+    }
+</style>
+
+<body>
+    https://www.youtube.com/watch?v=YoVJWZrS2WU https://www.youtube.com/watch?v=nhX9EUGIZ6o
+
+    <video id="video" autoplay></video>
+    <button id="snap">photo</button>
+    <button id="download">download</button>
+    <canvas id="canvas" width="200px" height="200px" style="border: solid;"></canvas>
+    <img src="" id="imgConverted" alt="" style="float: left; border: dashed;">
+
+    <script>
+        let canvas = document.querySelector('#canvas');
+        let context = canvas.getContext('2d');
+        let video = document.getElementById('video');
+        let imgC = document.getElementById('imgConverted');
+        let dl = document.getElementById('download');
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+
+            navigator.mediaDevices.getUserMedia({
+                video: true
+            }).then(stream => {
+                video.srcObject = stream;
+
+                video.play();
+            })
+        }
+
+        document.getElementById('snap').addEventListener('click', () => {
+
+
+            context.drawImage(video, 0, 0, 200, 200);
+            const dataURl = canvas.toDataURL('image/jpeg');
+            console.log(dataURl);
+            imgC.src = dataURl;
+        })
+
+        dl.addEventListener('click', () => {
+            if (window.navigator.msSaveBlob) {
+                console.log(111);
+                window.navigator.msSaveBlob(Canvas.msToBlob(), "canvas-image.png");
+            } else {
+
+                const a = document.createElement('a');
+                document.body.appendChild(a);
+                a.href = canvas.toDataURL("image/jpeg");
+                console.log(a.href);
+                a.download = "canvas-i.jpeg";
+                a.click();
+                document.body.removeChild(a);
+                console.log(222);
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hunger No Longer | Feeding Everyone</title>
+  <link rel="stylesheet" type="text/css" href="/Landing/css/landing.css"/>
+  <link rel="icon" href="/favicon/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!-------------------------------------->
+  <!-- The following is HTML for layout -->
+  <!-------------------------------------->
+  <!-- Header Navigation Bar -->
+      <!--********* NAV BAR START ***********-->
+      <div id="outerContainer" class="closebtn" onclick="closeNav()">
+        <div id="mySidenavContainer" class="sidenav">
+            <div id="profileBackground" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/hunger-no-longer.appspot.com/o/images%2FdjR9UC8ZHDRvrKfiaf0aq4ZL46b2.jpg?alt=media&token=ab3a6bbd-a045-44e8-b2f2-505cfa98a8a7);">
+                <div id="profile">
+                    <div></div>
+                    <div id="profilePicContainer">
+                        <img id="profilePic" src="https://firebasestorage.googleapis.com/v0/b/hunger-no-longer.appspot.com/o/images%2FdjR9UC8ZHDRvrKfiaf0aq4ZL46b2.jpg?alt=media&token=ab3a6bbd-a045-44e8-b2f2-505cfa98a8a7" width="100px" height="100px">
+                    </div>
+                    <div id="profileName">
+                        <p><b>Hunger No Longer</b></p>
+                    </div>
+                    <div id="profileEmail">
+                        <p>no_longer_hungry@app.com</p>
+                    </div>
+                </div>
+            </div>
+            <div id="mySidenavContents">
+                <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/gender-neutral-user.png"><b>Login</b></a>
+                <a href="/AboutUs/aboutUs_limitedAccess.html"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/shopping-cart.png"/><b>About Us</b></a>
+    <!--        <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/exercise.png"/><b>Volunteer</b></a>
+                <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/truck.png"/><b>My Deliveries</b></a>
+                <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/crowd.png"/><b>Social Hub</b></a> -->
+            </div>
+        </div>      
+        <!--********* NAV BAR END ***********-->
+        <div id="InnerContainer">
+        <div id="headingContainer">
+          <div id="hamburgerMenu">
+              <span id="menu" onclick="openNav()"><img src="https://img.icons8.com/material-two-tone/48/000000/menu--v4.png"></span>
+          </div>
+          <div id="title">
+              <span id="title-font">SETUP</span>
+          </div>
+          <div id="homeButtonContainer">
+              <div id="homeButton">
+                  
+              </div>
+          </div>
+      </div>
+      </div>
+
+      <!-- BUTTONS MAIN -->
+<div id=landingPage>
+    <h2>Step 1) Please Specify An Account Type</h2>
+    <div>
+        <a href="#" class="btn btn-primary btn-lg active" id="signUpIndividual" role="button" aria-pressed="true">Indivdiual</a>
+    </div>
+    <div>
+        <a href="#" class="btn btn-primary btn-lg active" id="signUpCharity" role="button" aria-pressed="true">Charity</a>
+    </div>
+    <div>
+        <a href="#" class="btn btn-primary btn-lg active" id="signUpBusinessOwner" role="button" aria-pressed="true">Business Owner</a>
+    </div>
+</div>
+
+
+
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, Firebase, API related    -->
+  <!----------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+  <!--------------------------------------------------------------------->
+  <!-- JS files: Your own JavaScript functions included here    -->
+  <!--------------------------------------------------------------------->
+  <script src="/private/firebase-api.js"></script>
+  <script src="/Forum/js/slidingNav.js"></script>
+  <script src="/private/redirectAuth.js"></script>
+  <script src="/Landing/js/roleAssignment.js"></script>
+</body>
+
+</html>

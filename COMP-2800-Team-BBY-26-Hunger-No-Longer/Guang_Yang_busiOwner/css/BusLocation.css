@@ -1,0 +1,50 @@
+/* Map */
+
+#map {
+    width: 100% !important;
+    height: 300px !important;
+    position: absolute;
+    top: 80px;
+    margin: 0 px;
+    border: salmon solid;
+}
+
+
+/*Location button*/
+
+#locationB {
+    width: 20px;
+    height: 20px;
+    top: 60px !important;
+    left: 370px !important;
+}
+
+
+/* Form of distance information*/
+
+.disInfo {
+    position: absolute;
+    top: 400px;
+}
+
+.col-4 {
+    text-align: right;
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+input {
+    border: 0.5px solid;
+}
+
+.btn-info {
+    margin-top: 20px;
+    margin-left: 175px;
+}
+
+#output {
+    width: 400px;
+    height: 100px;
+}

@@ -1,0 +1,11 @@
+.foodButton {
+    text-align: center;
+    margin: auto;
+}
+
+#locationB {
+    transform: translate(175px, 60px);
+    width: 20px;
+    height: 20px;
+    padding: 0;
+}

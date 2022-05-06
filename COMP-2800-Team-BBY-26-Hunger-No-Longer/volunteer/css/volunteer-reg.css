@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+.volunteerForm {
+    margin-top: 30px;
+    position: relative;
+    padding-left: 10vw; 
+    padding-right: 10vw;
+}
+
+.volunteerForm > button {
+    margin-top: 10px;
+    width: 40%;
+}
+
+/* MODAL STUFF */
+#myModalRevokeAccess {
+    display: none;
+    text-align: center;
+}
+
+/* MODAL STUFF */
+#myModalBlankForm {
+  display: none;
+  text-align: center;
+}
+
+/* MODAL STUFF */
+#myModalThankYou {
+  display: none;
+  text-align: center;
+}
+
+.modal-content {
+    display: block;
+    background-color: royalblue;
+}
+
+#bananaHeader{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(202, 0, 0);
+    text-align: center;
+}
+
+/* CSS Loader by dave: https://codepen.io/redlabor/pen/idHeG */
+.loading {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#loadingFont {
+    color: rgb(141, 140, 140);
+    margin: 0;
+    font-size: 16pt;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+  }
+  
+  /*
+   * Loading Dots
+   * Can we use pseudo elements here instead :after?
+   */
+  .loading span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+    width: .6em;
+    height: .6em;
+    margin: .19em;
+    background: #007DB6;
+    border-radius: .6em;
+    animation: loading 1s infinite alternate;
+    margin-top: 25px;
+  }
+  
+  /*
+   * Dots Colors
+   * Smarter targeting vs nth-of-type?
+   */
+  .loading span:nth-of-type(2) {
+    background: #008FB2;
+    animation-delay: 0.2s;
+  }
+  .loading span:nth-of-type(3) {
+    background: #009B9E;
+    animation-delay: 0.4s;
+  }
+  .loading span:nth-of-type(4) {
+    background: #00A77D;
+    animation-delay: 0.6s;
+  }
+  .loading span:nth-of-type(5) {
+    background: #00B247;
+    animation-delay: 0.8s;
+  }
+  .loading span:nth-of-type(6) {
+    background: #5AB027;
+    animation-delay: 1.0s;
+  }
+  .loading span:nth-of-type(7) {
+    background: #A0B61E;
+    animation-delay: 1.2s;
+  }
+  
+  /*
+   * Animation keyframes
+   * Use transition opacity instead of keyframes?
+   */
+  @keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #city-input {
+    border: solid 1px rgb(175, 175, 175);
+  }
+
+  #province-input {
+    border: solid 1px rgb(175, 175, 175);
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+body {
+    position: fixed;
+    transition: background-color .5s;
+}
+
+/**SIDE NAV CODE BY w3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.452);
+}
+
+.sidenav a {
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#mySidenavContainer {
+    display: grid;
+    grid-template-rows: 200px auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#mySidenavContainer > #profileBackground {
+    display: grid;
+    grid-template-rows: auto;
+    background-image: url(https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ece92f41f4c83000768d787%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D421%26cropX2%3D1694%26cropY1%3D37%26cropY2%3D1310);
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#profile {
+    display: grid;
+    grid-template-rows: 70px 60px auto auto;
+    backdrop-filter: blur(8px); 
+    padding-left: 15px;
+}
+
+#profilePic {
+    margin-top: -15px;
+    width: 30%;
+    height: 65px;
+    border-radius: 100%;
+}
+
+#profileName {
+    margin-top: 8px;
+    color: white;
+}
+
+#profileEmail {
+    color: white;
+    margin-top: -17px;
+    font-size: 12pt;
+}
+
+#mySidenavContents {
+    background-color: white;
+    text-overflow: ellipsis; /*CODE TO KEEP FONTS ALL IN ONE LINE: NO BREAKING*/
+    white-space: pre;
+    padding: 0px;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Used hiding scroll: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+#mySidenavContents::-webkit-scrollbar {
+    display: none;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/******************END OF NAV BAR CODE************************/
+
+#InnerContainer {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+#headingContainer {
+    display: grid;
+    grid-template-columns: auto auto 60px;
+    height: 70px;
+    border-bottom: 0.5px black solid;
+}
+
+#hamburgerMenu {
+    column-width: 60px;
+    background-color: rgb(175, 175, 175);
+    padding-top: 12px;
+    cursor: pointer; 
+}
+
+#menu {
+    margin-left: 5px;
+}
+
+#menuIcon { 
+    padding-right: 30px;
+    margin-top: -7px;
+}
+
+#logOutIcon { 
+    padding-right: 30px;
+    margin-top: -7px;
+}
+
+#title {
+    display: block;
+    padding-top: 17px;
+    text-align: center;
+    column-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(175, 175, 175);
+}
+
+#title-font {
+    font-size: 20pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+#cameraButtonContainer {
+    background-color: rgb(175, 175, 175);
+}
+
+#actualCameraButton { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17px;
+}
+
+#actualCameraButton:hover {
+    cursor: pointer;
+}
+
+/* Used hiding scroll: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+#postContainer {
+    display: grid;
+    border-bottom: 0.5px black solid;
+    grid-template-rows: 50px 400px auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgb(75, 75, 75);
+    height: 500px; 
+    overflow: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Used hiding scroll: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+#postContainer::-webkit-scrollbar {
+    display: none;
+}
+
+/*Textfield Code from W3Schools: https://www.w3schools.com/css/css_form.asp */
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+  }
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+#textBox {
+    font-size: 18pt;
+    height: 42px;
+}
+
+#titleBox {
+    font-size: 18pt;
+    height: 42px;
+}
+
+#tagBox {
+    font-size: 18pt;
+    height: 42px;
+}
+
+#feed {
+    border: 1px solid rgb(107, 107, 107);
+}
+
+#dateAndUserContainer {
+    display: grid;
+    grid-template-columns: 130px auto auto;
+}
+
+#userNamePosted {
+    padding-left: 10px;
+
+}
+
+#pictureTitleTextContainer {
+    display: grid;
+    grid-template-columns: 0px 100px auto;
+}
+
+#picture > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+
+}
+
+#titleAndTextContainer {
+    display: grid;
+    grid-template-rows: 32px 50px;
+}
+
+#feedTitle {
+    font-size: 15px; /*EDIT THIS FOR adaptive resolution*/
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color: black;
+}
+
+#feedTitle > p {
+    width: 100%;
+    text-overflow: ellipsis; /*CODE TO KEEP FONTS ALL IN ONE LINE: NO BREAKING*/
+    overflow: hidden; /*CODE TO KEEP FONTS ALL IN ONE LINE: NO BREAKING*/
+    white-space: pre;/*CODE TO KEEP FONTS ALL IN ONE LINE: NO BREAKING*/
+    margin-top: 7px;
+}
+
+#textBody {
+    overflow: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+}
+
+#textBody::-webkit-scrollbar {
+    display: none;
+}
+
+#textBody > p {
+    margin-top: -2px;
+}
+
+#like-LoveContainer {
+    display: grid;
+    grid-template-columns: 50px 50px 50px auto;
+}
+
+#heart {
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+#smile {
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+#notSmile {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+#adSpaceContainer{
+    padding-top: 20px;
+    height: 20px;
+}
+
+#lowerNavContainer{
+    height: 55px;
+    padding-top: 40px;
+}
+
+/* Gradient code from https://www.w3schools.com/css/css3_gradients.asp */
+#postButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(67, 135, 212); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(0, 143, 238) , rgb(0, 98, 190));
+    padding-top: 16px;
+    height: 55px;
+    border-radius: 20px 20px 20px 20px; 
+    width: 50%;
+}
+
+#postButton:hover {
+    color:white;
+    cursor: pointer; 
+    text-decoration: underline;
+    /* NOTE: Text shadow edits from left to right: xyz directions */
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(78, 161, 255), 0 0 50px darkgoldenrod;
+}
+
+#postButtonFont {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#postButton2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: rgb(67, 135, 212); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to left, rgb(0, 143, 238) , rgb(0, 98, 190));
+  margin-top: -20px;
+  padding-top: 16px;
+  height: 55px;
+  border-radius: 20px 20px 20px 20px; 
+  width: 50%;
+}
+
+#postButton2:hover {
+  color:white;
+  cursor: pointer; 
+  text-decoration: underline;
+  /* NOTE: Text shadow edits from left to right: xyz directions */
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(78, 161, 255), 0 0 50px darkgoldenrod;
+}
+
+
+.modal-content {
+    height: 325px;
+    margin-top: 100px;
+}
+
+.modal-header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#editButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(67, 135, 212); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(0, 143, 238) , rgb(0, 98, 190));
+    padding-top: 8px;
+    height: 55px;
+    border-radius: 20px 20px 20px 20px; 
+    width: 35%;
+    color: white;
+}
+
+#editButton:hover {
+    color:white;
+    cursor: pointer; 
+    text-decoration: underline;
+    /* NOTE: Text shadow edits from left to right: xyz directions */
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(78, 161, 255), 0 0 50px darkgoldenrod;
+}
+
+#editButtonFont {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#submitButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(48, 216, 132); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(0, 250, 125) , rgb(43, 197, 125));
+    padding-top: 8px;
+    height: 55px;
+    border-radius: 20px 20px 20px 20px; 
+    width: 35%;
+    color: white;
+}
+
+#submitButton > a:link {
+    color: white;
+}
+
+#textBody {
+  width: 100%;
+  min-height: 370px;
+  resize: none;
+  color: #666;
+  font-size: 18pt;
+  border: none;
+
+}
+
+#the-count {
+  float: right;
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+
+
+/* CSS Loader by dave: https://codepen.io/redlabor/pen/idHeG */
+.loading {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#loadingFont {
+    color: #ccc;
+    margin: 0;
+    font: 20pt verdana;
+    text-transform: uppercase;
+  }
+
+  #loadingFont2 {
+    color: rgb(141, 140, 140);
+    margin: 0;
+    font-size: 12pt;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+  }
+  
+  /*
+   * Loading Dots
+   * Can we use pseudo elements here instead :after?
+   */
+  .loading span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+    width: .6em;
+    height: .6em;
+    margin: .19em;
+    background: #007DB6;
+    border-radius: .6em;
+    animation: loading 1s infinite alternate;
+    margin-top: 25px;
+  }
+  
+  /*
+   * Dots Colors
+   * Smarter targeting vs nth-of-type?
+   */
+  .loading span:nth-of-type(2) {
+    background: #008FB2;
+    animation-delay: 0.2s;
+  }
+  .loading span:nth-of-type(3) {
+    background: #009B9E;
+    animation-delay: 0.4s;
+  }
+  .loading span:nth-of-type(4) {
+    background: #00A77D;
+    animation-delay: 0.6s;
+  }
+  .loading span:nth-of-type(5) {
+    background: #00B247;
+    animation-delay: 0.8s;
+  }
+  .loading span:nth-of-type(6) {
+    background: #5AB027;
+    animation-delay: 1.0s;
+  }
+  .loading span:nth-of-type(7) {
+    background: #A0B61E;
+    animation-delay: 1.2s;
+  }
+  
+  /*
+   * Animation keyframes
+   * Use transition opacity instead of keyframes?
+   */
+  @keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /******<!-- Dancing Banana by Ramiro: https://codepen.io/croce/pen/sjwpg -->******/
+  .banana {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 45px;
+    width: 198px;
+    height: 210px;
+    background-image: url("https://i.cloudup.com/q3ZLPB9kVH.png");
+    
+    
+    -webkit-animation: play .8s steps(8) infinite;
+       -moz-animation: play .8s steps(8) infinite;
+        -ms-animation: play .8s steps(8) infinite;
+         -o-animation: play .8s steps(8) infinite;
+            animation: play .8s steps(8) infinite;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1584px; }
+}
+
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1584px; }
+}
+
+@-ms-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1584px; }
+}
+
+@-o-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1584px; }
+}
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1584px; }
+}
+
+#imageLogo > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+
+#homeButtonContainer {
+    background-color: rgb(175, 175, 175);
+}
+
+#termsCondition {
+  text-align: center;
+}
+
+#border {
+  border-bottom: 3px solid rgb(143, 143, 143);
+}
+
+#button-sub {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+    

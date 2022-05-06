@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hunger No Longer | Login</title>
+    <link rel="stylesheet" type="text/css" href="/login.css"/>
+    <link rel="icon" href="/favicon/favicon-32x32.png">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+    <link rel="stylesheet" type="text/css" href="./Guang_Yang_busiOwner/css/EasterEgg.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+</head>
+
+<body>
+    <!-------------------------------------->
+    <!-- The following is HTML for layout -->
+    <!-------------------------------------->
+    <!-- Header Navigation Bar -->
+    <!--********* NAV BAR START ***********-->
+    <div id="outerContainer" class="closebtn" onclick="closeNav()">
+        <div id="mySidenavContainer" class="sidenav">
+            <div id="profileBackground">
+                <div id="profile">
+                    <div></div>
+                    <div id="profilePicContainer">
+                        <img id="profilePic" src="https://firebasestorage.googleapis.com/v0/b/hunger-no-longer.appspot.com/o/images%2FdjR9UC8ZHDRvrKfiaf0aq4ZL46b2.jpg?alt=media&token=ab3a6bbd-a045-44e8-b2f2-505cfa98a8a7" width="100px" height="100px">
+                    </div>
+                    <div id="profileName">
+                        <p><b>Hunger No Longer</b></p>
+                    </div>
+                    <div id="profileEmail">
+                        <p>no_longer_hungry@app.com</p>
+                    </div>
+                </div>
+            </div>
+            <div id="mySidenavContents">
+                <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/gender-neutral-user.png"><b>Login</b></a>
+                <a href="/AboutUs/aboutUs_noAccess.html"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/shopping-cart.png" /><b>About Us</b></a>
+                <!-- <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/exercise.png"/><b>Volunteer</b></a>
+                <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/truck.png"/><b>My Deliveries</b></a>
+                <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/crowd.png"/><b>Social Hub</b></a> -->
+            </div>
+        </div>
+        <!--********* NAV BAR END ***********-->
+        <div id="InnerContainer">
+            <div id="headingContainer">
+                <div id="hamburgerMenu">
+                   
+                </div>
+                <div id="title">
+                    <span id="title-font">HUNGER NO LONGER</span>
+                </div>
+                <div id="homeButtonContainer">
+                    <div id="homeButton">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-3" id="loginContainer">
+                <h1 class="display-4"></h1>
+                <div id="firebaseui-auth-container"><img id="logo" src="/Guang_Yang_busiOwner/img/logo.png" width="130px" height="130px"></div>
+                <div id="loader">Loading...</div>
+            </div>
+            <section id="egg">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+        </div>
+        <!----------------------------------------------->
+        <!-- JS: Boostrap, Firebase, API related    -->
+        <!----------------------------------------------->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+        <!--------------------------------------------------------------------->
+        <!-- JS files: Your own JavaScript functions included here    -->
+        <!--------------------------------------------------------------------->
+        <script src="private/firebase-api.js"></script>
+        <script src="Forum/js/slidingNav.js"></script>
+        <script src="private/firebase-login.js"></script>
+        <script src="./Guang_Yang_busiOwner/js/EasterEgg.js"></script>
+    </div>
+
+</body>
+
+</html>

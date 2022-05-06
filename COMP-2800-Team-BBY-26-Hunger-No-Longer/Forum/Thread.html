@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Hunger No Longer: Thread</title> 
+    <link rel="stylesheet" type="text/css" href="css/thread.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="/favicon/favicon-32x32.png">
+</head>
+<body>
+    <!--********* NAV BAR START ***********-->
+    <div id="outerContainer" class="closebtn" onclick="closeNav()">
+        <div id="mySidenavContainer" class="sidenav">
+            <div id="profileBackground">
+                <!-- INSERT FROM SERVER -->
+                <!-- END OF INSERT FROM SERVER -->
+            </div>
+            <div id="mySidenavContents">
+                <a href="/Guang_Yang_busiOwner/html/BusNews.html"><img id="menuIcon" src="https://img.icons8.com/officel/25/000000/home-page.png"><b>Home</b></a>
+                <a href="/myAccount/myAccount_individual.html"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/gender-neutral-user.png"><b>My Account</b></a>
+                <a href="/volunteer/map.html"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/shopping-cart.png"/><b>Place Order</b></a>
+                <a href="/volunteer/volunteerLanding.html"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/exercise.png"/><b>Volunteer</b></a>
+                <a href="/volunteer/volunteer-displayList.html"><img id="menuIcon" src="https://img.icons8.com/dusk/27/000000/add-list.png"/><b>Volunteer List</b></a>
+                <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/truck.png"/><b>My Deliveries</b></a>
+                <a href="/Forum/Forum.html"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/crowd.png"/><b>Social Hub</b></a>
+                <a href="/AboutUs/aboutUs.html"><img id="menuIcon" src="https://img.icons8.com/doodle/27/000000/employee-card--v1.png"/><b>About Us</b></a>
+                <a href="/Help/help.html"><img id="menuIcon" src="https://img.icons8.com/officel/25/000000/help.png"/><b>Help</b></a>
+                <a href="#" onclick="logOut()" ><img id="logOutIcon" src="https://img.icons8.com/plasticine/30/000000/export.png"/><b>Log Out</b></a>
+            </div>
+        </div>      
+        <!--********* NAV BAR END ***********-->
+
+        <div id="InnerContainer">
+                <div id="headingContainer">
+                    <div id="hamburgerMenu">
+                        <span id="menu" onclick="openNav()"><img src="https://img.icons8.com/material-two-tone/48/000000/menu--v4.png"/></span>
+                    </div>
+                    <div id="title">
+                        <span id="title-font">SOCIAL HUB</span>
+                    </div>
+                    <div id="homeButtonContainer">
+                        <div class="dropdown">
+                            <img onclick="myFunction()" id="actualHomeButton" src="https://img.icons8.com/color/50/000000/twitter--v1.png">
+                            <!-- Twitter API here!! -->
+                            <div id="myDropdown" class="dropdown-content">
+                                <a class="twitter-timeline" data-width="300" data-height="400" data-theme="dark" href="https://twitter.com/HungerNoLonger_?ref_src=twsrc%5Etfw">Tweets by HungerNoLonger_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <a href="https://twitter.com/HungerNoLonger_?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @HungerNoLonger_</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="@HungerNoLongerApp " data-show-count="false">Tweet @HungerNoLonger_</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POST CONTAINER -->
+                <div id="postContainer">
+                    <!-- THREAD INFO ENLARGED FROM SERVER-->
+                    <!-- THREAD INFO ENLARGED FROM SERVER-->
+                    <!-- THREAD INFO ENLARGED FROM SERVER-->
+                    <!-- THREAD INFO ENLARGED FROM SERVER-->
+                    <div id="commentContainer">
+                        
+                        <!-- COMMENT FROM SERVER ACCORDING TO SPECIFIC POST -->
+                        <!-- COMMENT FROM SERVER ACCORDING TO SPECIFIC POST -->
+                        <!-- COMMENT FROM SERVER ACCORDING TO SPECIFIC POST -->
+                    </div>
+
+                </div>
+
+                <div id="lowerNavContainer">
+                    <div id="postButton" data-toggle="modal" data-target="#myModal">
+                        <span id="postButtonFont">COMMENT</span>
+                    </div>
+                </div>
+
+                <!-- Modal Form for Comments -->
+                <form id="userCommentForm">
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                        
+                            <!-- Modal content-->
+                            <div class="modal-content" keyboard="true">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Post A Comment</h4>
+                                </div>
+                                    <div class="modal-body">
+                                        <!-- Textarea Code from: https://codepen.io/zabielski/pen/gPPywv -->
+                                        <textarea name="the-textarea" type="text" id="textBody" maxlength="2000" placeholder="What's On Your Mind?" autofocus required></textarea>
+                                        <div id="the-count">
+                                        <span id="current">0</span>
+                                        <span id="maximum">/ 2000</span>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-default" id="submitButton"><a href="#" style="color: white;">SUBMIT</a></button></a>
+                                    </div> 
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+        </div>
+    </div>
+</body>
+</html>
+
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, Firebase, API related    -->
+  <!----------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--------------------------------------------------------------------->
+<!-- JS files: Your own JavaScript functions included here    -->
+<!--------------------------------------------------------------------->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/slidingNav.js"></script> 
+<script src="js/createAPostText.js"></script> 
+<script src="/private/firebase-api.js"></script>
+<script src="/private/firebase-logout.js"></script>
+<script src="/Forum/js/redirectAuth.js"></script>
+<script src="/Forum/js/getUserProfileNav.js"></script>
+<script src="/Forum/js/postDetails.js"></script>
+<script src="/Forum/js/commentInput.js"></script>
+<script src="/Forum/js/getComments.js"></script>
+<script src="/Forum/js/dropdownSocialMedia.js"></script>

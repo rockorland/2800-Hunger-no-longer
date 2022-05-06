@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunger No Longer: Volunteer Registration</title>
+  <link rel="stylesheet" type="text/css" href="css/volunteer-reg.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="icon" href="/favicon/favicon-32x32.png">
+
+</head>
+
+<body>
+  <!-------------------------------------->
+  <!-- The following is HTML for layout -->
+  <!-------------------------------------->
+  <!-- Header Navigation Bar -->
+  <!--********* NAV BAR START ***********-->
+  <div id="outerContainer" class="closebtn" onclick="closeNav()">
+    <div id="mySidenavContainer" class="sidenav">
+      <div id="profileBackground">
+        <!-- INSERT FROM SERVER -->
+        <!-- END OF INSERT FROM SERVER -->
+      </div>
+      <div id="mySidenavContents">
+        <a href="/Guang_Yang_busiOwner/html/BusNews.html"><img id="menuIcon" src="https://img.icons8.com/officel/25/000000/home-page.png"><b>Home</b></a>
+        <a href="/myAccount/myAccount_individual.html"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/gender-neutral-user.png"><b>My Account</b></a>
+        <a href="/volunteer/map.html"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/shopping-cart.png"/><b>Place Order</b></a>
+        <a href="/volunteer/volunteerLanding.html"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/exercise.png"/><b>Volunteer</b></a>
+        <a href="/volunteer/volunteer-displayList.html"><img id="menuIcon" src="https://img.icons8.com/dusk/27/000000/add-list.png"/><b>Volunteer List</b></a>
+        <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/truck.png"/><b>My Deliveries</b></a>
+        <a href="/Forum/Forum.html"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/crowd.png"/><b>Social Hub</b></a>
+        <a href="/AboutUs/aboutUs.html"><img id="menuIcon" src="https://img.icons8.com/doodle/27/000000/employee-card--v1.png"/><b>About Us</b></a>
+        <a href="/Help/help.html"><img id="menuIcon" src="https://img.icons8.com/officel/25/000000/help.png"/><b>Help</b></a>
+        <a href="#" onclick="logOut()" ><img id="logOutIcon" src="https://img.icons8.com/plasticine/30/000000/export.png"/><b>Log Out</b></a>
+      </div>
+    </div>
+        <!--********* NAV BAR END ***********-->
+        <div id="InnerContainer">
+          <div id="headingContainer">
+            <div id="hamburgerMenu">
+                <span id="menu" onclick="openNav()"><img src="https://img.icons8.com/material-two-tone/48/000000/menu--v4.png"/></span>
+            </div>
+            <div id="title">
+                <span id="title-font">VOLUNTEER</span>
+            </div>
+            <div id="homeButtonContainer">
+                <div id="homeButton">
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+    <!-- This page modifies Volunteer infomation -->
+    <form id=form>
+    <div class="volunteerForm">
+      <h2>Fill out the form to register as a volunteer!</h2>
+      <div id="border"></div>
+      <div class="form-group">
+        <label for="exampleInputAddress">Address</label>
+        <input type="address" class="form-control" id="address-input" placeholder="Address" required />
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="exampleInputAddress">City</label>
+          <input type="text" class="form-control" id="city-input" placeholder="City" required/>
+        </div>
+        <div class="col">
+          <label for="exampleInputAddress">Province</label>
+          <input type="text" class="form-control" id="province-input" placeholder="Province" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputNumber">Phone Number</label>
+        <input type="tel" class="form-control" id="number-input" maxlength="10"
+        placeholder="1234656718" required />
+        </div>
+        <br> 
+      <h3>Click available times you can volunteer!</h3>
+        <input type="checkbox" id="availDay" name="days" value="Mon"/>
+        Monday
+        <input type="checkbox" id="availDay" name="days" value="Tues"/>
+        Tuesday
+        <input type="checkbox" id="availDay" name="days" value="Wed"/>
+        Wednesday
+        <input type="checkbox" id="availDay" name="days" value="Thur"/>
+        Thursday
+        <input type="checkbox" id="availDay" name="days" value="Fri"/>
+        Friday
+        <input type="checkbox" id="availDay" name="days" value="Sat"/>
+        Saturday
+        <input type="checkbox" id="availDay" name="days" value="Sun"/>
+        Sunday
+        <div id="border"></div>
+        <br>
+
+        <h5 id="termsCondition">By clicking 'Submit' you acknowledge and agree to be contacted by Charities or Businesses</h5>
+          <button type="button" id="button-sub" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>        
+          <button onclick="location.href='/Guang_Yang_busiOwner/html/BusNews.html'" id="button-sub" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </form>
+
+      <!-- Modal for Revoking Access -->
+      <div class="modal fade" id="myModalRevokeAccess" role="dialog" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 12pt; color: black;">
+              <div class="modal-dialog">
+                      <!-- Modal content-->
+                  <div class="modal-content" id="bananaBox" keyboard="true">
+                      <div class="modal-header" id="bananaHeader">
+                          <h4 class="modal-title">
+                              <b>Permission Denied</b>
+                          </h4>
+                      </div>
+                  <div class="modal-body" id="bananaText">
+                      <!-- /* CSS Loader by dave: https://codepen.io/redlabor/pen/idHeG */ -->
+                          <div class="loading">
+                              <h2 id="loadingFont">Redirecting you to home, please wait...</h2>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Modal for Blank Form -->
+      <div class="modal fade" id="myModalBlankForm" role="dialog" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 12pt; color: black; height: 600px;">
+              <div class="modal-dialog">
+                      <!-- Modal content-->
+                  <div class="modal-content" id="bananaBox" keyboard="true">
+                      <div class="modal-header" id="bananaHeader">
+                          <h4 class="modal-title" style="font-size: 20pt;">
+                              <b>Form is blank</b>
+                          </h4>
+                      </div>
+                  <div class="modal-body" id="bananaText" style="font-family: 'Poppins', sans-serif; font-weight: 500;">
+                      <p>Please fill in all required fields.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <div id="postButton" onclick="closeModal()">
+                      <span id="postButtonFont">GOT IT</span>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+            <!-- Modal for Filling Out Form -->
+        <div class="modal fade" id="myModalThankYou" role="dialog" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 12pt; color: black;">
+              <div class="modal-dialog">
+                      <!-- Modal content-->
+                  <div class="modal-content" id="bananaBox" keyboard="true">
+                      <div class="modal-header" id="bananaHeader">
+                          <h4 class="modal-title" style="font-size: 20pt; color: rgb(0, 0, 0);">
+                              <b>Thank You For Registering</b>
+                          </h4>
+                      </div>
+                  <div class="modal-body" id="bananaText">
+                      <!-- /* CSS Loader by dave: https://codepen.io/redlabor/pen/idHeG */ -->
+                          <div class="loading">
+                              <h2 id="loadingFont" style="font-family: 'Poppins', sans-serif; font-weight: 500; margin-top: -30px;">Please Wait as we are currently fixing dolphins and turtles...</h2>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+    <script src="../private/firebase-api.js"></script>
+    <script src="../private/firebase-logout.js"></script>
+    <script src="../Forum/js/slidingNav.js"></script>
+    <script src="js/volunteer.js"></script>
+    <script src="/Forum/js/getUserProfileNav.js"></script>
+    <script src="/volunteer/js/volunteerCheck2.js"></script>
+</body>
+
+</html>

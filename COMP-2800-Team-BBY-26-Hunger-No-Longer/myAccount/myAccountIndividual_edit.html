@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunger No Longer: Edit Profile</title>
+    <link rel="stylesheet" type="text/css" href="/myAccount/css/myAccount_editStyle.css"/>
+    <link rel="icon" href="/favicon/favicon-32x32.png">
+    <style>
+        #mySidenavContainer > #profileBackground {
+            display: grid;
+            grid-template-rows: auto;
+            background-size: cover;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!--********* NAV BAR START ***********-->
+    <div id="outerContainer" class="closebtn" onclick="closeNav()">
+        <div id="mySidenavContainer" class="sidenav">
+            <div id="profileBackground">
+                <!-- INSERT FROM SERVER -->
+                <!-- END OF INSERT FROM SERVER -->
+            </div>
+            <div id="mySidenavContents">
+                <a href="/Guang_Yang_busiOwner/html/BusNews.html"><img id="menuIcon" src="https://img.icons8.com/officel/25/000000/home-page.png"><b>Home</b></a>
+                <a href="/myAccount/myAccount_individual.html"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/gender-neutral-user.png"><b>My Account</b></a>
+                <a href="/volunteer/map.html"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/shopping-cart.png"/><b>Place Order</b></a>
+                <a href="/volunteer/volunteerLanding.html"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/exercise.png"/><b>Volunteer</b></a>
+                <a href="/volunteer/volunteer-displayList.html"><img id="menuIcon" src="https://img.icons8.com/dusk/27/000000/add-list.png"/><b>Volunteer List</b></a>
+                <a href="#"><img id="menuIcon" src="https://img.icons8.com/office/25/000000/truck.png"/><b>My Deliveries</b></a>
+                <a href="/Forum/Forum.html"><img id="menuIcon" src="https://img.icons8.com/office/27/000000/crowd.png"/><b>Social Hub</b></a>
+                <a href="/AboutUs/aboutUs.html"><img id="menuIcon" src="https://img.icons8.com/doodle/27/000000/employee-card--v1.png"/><b>About Us</b></a>
+                <a href="/Help/help.html"><img id="menuIcon" src="https://img.icons8.com/officel/25/000000/help.png"/><b>Help</b></a>
+                <a href="#" onclick="logOut()" ><img id="logOutIcon" src="https://img.icons8.com/plasticine/30/000000/export.png"/><b>Log Out</b></a>
+            </div>
+        </div>      
+        <!--********* NAV BAR END ***********-->
+
+        <div id="InnerContainer">
+                <div id="headingContainer">
+                    <div id="hamburgerMenu">
+                        <span id="menu" onclick="openNav()"><img src="https://img.icons8.com/material-two-tone/48/000000/menu--v4.png"/></span>
+                    </div>
+                    <div id="title">
+                        <span id="title-font">MY ACCOUNT</span>
+                    </div>
+                    <div id="homeButtonContainer">
+                        <div id="homeButton">
+                            <img id="actualHomeButton" src="https://img.icons8.com/material/42/000000/home--v5.png">
+                        </div>
+                    </div>
+                </div>
+
+            <!-- PROFILE CARD BOOTSTRAP FROM: https://bootsnipp.com/snippets/xpyz9 -->
+                <div id="feedContainer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6">
+                    
+                                <div class="card hovercard">
+                                    <div class="cardheader">
+                                    </div>
+
+                                     <!-- START INSERT FROM SERVER -->
+                                    <div id="profileContainer">
+                                        <div class="avatar">
+                                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" width="100px" height="100px">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">
+                                                <span id="nameTitleSpot"><b>Hunger No Longer</b></span>
+                                                <br>
+                                                <span id="usernameSpot">@Username</span>
+                                            </div>
+                                            <div class="desc">Description Here!</div>
+                                        </div>
+                                    </div>
+                                    <!-- END OF INSERT FROM SERVER -->
+
+                                    <!-- FORM HERE -->
+                                    <form id="userInputForm">
+                                        <div class="bottom">
+                                            <div id="fieldContainer">
+                                                <div class="form__group">
+                                                    <input type="text" class="form__input" id="usernameBox" placeholder="Enter New Username" required="" />
+                                                    <label for="name" class="form__label">Your New Username</label>
+                                                </div>
+                                                <div class="form__group">
+                                                    <input type="email" class="form__input" id="emailBox" placeholder="Enter New Email" required="" />
+                                                    <label for="name" class="form__label">Your New Email</label>
+                                                </div>
+                                                <div id="userBio">
+                                                    <textarea name="the-textarea" type="text" id="userBioBox" maxlength="100" placeholder="Describe Yourself..."autofocus required></textarea>
+                                                    <div id="the-count">
+                                                        <span id="current">0</span>
+                                                        <span id="maximum">/ 100</span>
+                                                    </div>
+                                                </div>
+                                             <!-- Button -->
+                                                <div id="submitButtonContainer">
+                                                    <button type="submit" class="btn btn-default" id="submitButton">SAVE CHANGES</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- END OF FORM -->
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- END OF BOOTSTRAP -->
+                <div id="lowerNavContainer">
+                </div>
+        </div>
+    </div>
+</body>
+</html>
+
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, Firebase, API related    -->
+  <!----------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--------------------------------------------------------------------->
+<!-- JS files: Your own JavaScript functions included here    -->
+<!--------------------------------------------------------------------->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="/Forum/js/slidingNav.js"></script>
+<script src="/private/firebase-api.js"></script>
+<script src="/private/firebase-logout.js"></script>
+<script src="/Forum/js/redirectAuth.js"></script>
+<script src="/myAccount/js/userBioText.js"></script>
+<script src="/myAccount/js/getUserProfile.js"></script>
+<script src="/myAccount/js/editProfileForm_individual.js"></script>
+
+<!-- SCRIPT for linking File Upload Button to Image: -->
+<script>
+    $(document).ready(function() {
+        //To link picture to Add File button:
+        $("#actualCameraButton").click(function () {
+            $("#pictureButton").trigger('click');
+        });
+    });
+</script>
+

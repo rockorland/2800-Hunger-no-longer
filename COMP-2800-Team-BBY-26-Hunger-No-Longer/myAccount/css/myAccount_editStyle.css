@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+body {
+    position: fixed;
+    transition: background-color .5s;
+}
+
+/**SIDE NAV CODE BY w3schools: https://www.w3schools.com/howto/howto_js_sidenav.asp */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.452);
+}
+
+.sidenav a {
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#mySidenavContainer {
+    display: grid;
+    grid-template-rows: 200px auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* MAKE THIS EXTERNAL!! */
+/* #mySidenavContainer > #profileBackground {
+    display: grid;
+    grid-template-rows: auto;
+    background-image: url(https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ece92f41f4c83000768d787%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D421%26cropX2%3D1694%26cropY1%3D37%26cropY2%3D1310);
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} */
+
+#profile {
+    display: grid;
+    grid-template-rows: 70px 60px auto auto;
+    backdrop-filter: blur(8px); 
+    padding-left: 15px;
+}
+
+#profilePic {
+    margin-top: -15px;
+    width: 30%;
+    height: 65px;
+    border-radius: 100%;
+}
+
+#profileName {
+    margin-top: 10px;
+    color: white;
+}
+
+#profileEmail {
+    color: white;
+    margin-top: -15px;
+    font-size: 12pt;
+}
+
+#mySidenavContents {
+    background-color: white;
+    text-overflow: ellipsis; /*CODE TO KEEP FONTS ALL IN ONE LINE: NO BREAKING*/
+    white-space: pre;
+    padding: 0px;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Used hiding scroll: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+#mySidenavContents::-webkit-scrollbar {
+    display: none;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/******************END OF NAV BAR CODE************************/
+
+#InnerContainer {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+#headingContainer {
+    display: grid;
+    grid-template-columns: auto auto 60px;
+    height: 71px;
+    border-bottom: 0.5px black solid;
+}
+
+#hamburgerMenu {
+    column-width: 60px;
+    background-color: rgb(175, 175, 175);
+    padding-top: 12px;
+    padding-left: 2px;
+    cursor: pointer; 
+}
+
+#menu {
+    margin-left: 5px;
+}
+
+#menuIcon { 
+    padding-right: 30px;
+    padding-top: 50px;
+    margin-top: -35px;
+}
+
+#logOutIcon { 
+    padding-right: 30px;
+    padding-top: 50px;
+    margin-top: -35px;
+}
+
+#title {
+    display: block;
+    padding-top: 20px;
+    padding-right: 2px;
+    text-align: center;
+    column-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(175, 175, 175);
+}
+
+#title-font {
+    font-size: 20pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+#homeButtonContainer {
+    background-color: rgb(175, 175, 175);
+}
+
+#actualHomeButton { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-right: 2px;
+}
+
+#actualHomeButton:hover {
+    cursor: pointer;
+}
+
+/* Used hiding scroll: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+#feedContainer {
+    display: grid;
+    border-bottom: 0.5px black solid;
+    grid-template-rows: 650px auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgb(75, 75, 75);
+    background-color: rgb(255, 255, 255);
+    row-gap: 5px;
+    overflow: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Used hiding scroll: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+#feedContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#feed {
+    display: grid;
+    grid-template-rows: 30px 100px 35px; /*REVISE?*/
+    border: 1px solid rgb(107, 107, 107);
+}
+
+#dateAndUserContainer {
+    display: grid;
+    grid-template-columns: 130px auto auto;
+}
+
+#userNamePosted {
+    padding-left: 10px;
+
+}
+
+#pictureTitleTextContainer {
+    display: grid;
+    grid-template-columns: 0px 100px auto;
+}
+
+#picture > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+#titleAndTextContainer {
+    display: grid;
+    grid-template-rows: 32px 50px;
+}
+
+#feedTitle {
+    font-size: 15px; /*EDIT THIS FOR adaptive resolution*/
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color: black;
+    overflow: hidden;
+}
+
+#feedTitle > p {
+    width: 100%;
+    text-overflow: ellipsis; /*CODE TO KEEP FONTS ALL IN ONE LINE: NO BREAKING*/
+    overflow: hidden; /*CODE TO KEEP FONTS ALL IN ONE LINE: NO BREAKING*/
+    white-space: pre;/*CODE TO KEEP FONTS ALL IN ONE LINE: NO BREAKING*/
+    margin-top: 7px;
+}
+
+#like-LoveContainer {
+    display: grid;
+    grid-template-columns: 50px 50px 50px auto;
+}
+
+#heart {
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+#smile {
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+#notSmile {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+#adSpaceContainer{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+    height: 35px;
+    background-color:rgb(12, 250, 179);
+}
+
+#lowerNavContainer{
+    height: 55px;
+    padding-top: 40px;
+    background-color: rgb(175, 175, 175);
+}
+
+/*BOOTSTRAP from https://bootsnipp.com/snippets/xpyz9*/
+
+.card {
+    background-color: rgba(214, 224, 226, 0.2);
+}
+
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(214, 224, 226, 0.1);
+}
+
+.card.hovercard .cardheader {
+    background-image: url("https://i.pinimg.com/originals/5c/2b/29/5c2b2971110912a5de3afc97f25e909b.jpg");
+    background-size: cover;
+    height: 135px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-bottom: 5px solid rgba(255,255,255,0.3);
+}
+
+.card.hovercard .avatar {
+    position: relative;
+    top: -50px;
+    margin-bottom: -50px;
+}
+
+.card.hovercard .avatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 143, 238, 0.8);
+}
+
+.card.hovercard .info {
+    padding: 4px 8px 10px;
+}
+
+.card.hovercard .info .title {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #262626;
+    vertical-align: middle;
+}
+
+.card.hovercard .info .desc {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+.card.hovercard .bottom {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    /* margin-bottom: -17px;   */
+    width: 65%;
+}
+
+/*INPUT FORM BOOTSTRAP BY: https://codepen.io/fidalgodev/pen/bOGaVy */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.form__label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+    margin-top: 2px;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+}
+
+.form__input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 10pt;
+    margin: 0 auto;
+    padding: 10px 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 50%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    border: 1px solid black;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+
+#fieldContainer { 
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: auto auto auto auto;
+    padding-top: 20px;
+    row-gap: 10px;
+}
+
+/* Gradient code from https://www.w3schools.com/css/css3_gradients.asp */
+#postButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(67, 135, 212); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(0, 143, 238) , rgb(0, 98, 190));
+    font-family: 'Roboto', sans-serif;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    padding-top: 20px;
+    height: 35px;
+    border-radius: 20px 20px 20px 20px; 
+    width: 50%;
+}
+
+#postButton:hover {
+    color:white;
+    cursor: pointer; 
+    text-decoration: underline;
+    /* NOTE: Text shadow edits from left to right: xyz directions */
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(78, 161, 255), 0 0 50px darkgoldenrod;
+}
+
+#postButton a:visited {
+    color:white;
+    cursor: pointer; 
+    /* NOTE: Text shadow edits from left to right: xyz directions */
+}
+
+#postButtonFont {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#usernameSpot {
+    font-size: 12pt;
+}
+
+
+#userBioBox::-webkit-scrollbar {
+    display: none;
+}
+
+#userBioBox > p {
+    margin-top: -2px;
+}
+
+#userBioBox{
+    min-height: 50px;
+    resize: none;
+    color: #666;
+    font-size: 12pt;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 0.2rem;
+    overflow: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    font-family: 'Poppins', sans-serif;
+    width: 76%;
+    height: 100%;
+  }
+  
+  #the-count {
+    display: float-right;
+    font-size: 0.875rem;
+  }
+
+  #submitButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgb(67, 135, 212); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to left, rgb(0, 143, 238) , rgb(0, 98, 190));
+    margin-top: 35px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 55px;
+    font-size: 12pt;
+    height: 45px;
+    border-radius: 20px 20px 20px 20px; 
+    width: 60%;
+    color: white;
+    border: none;
+}
+
+#submitButton > a:link {
+    color: white;
+}
+

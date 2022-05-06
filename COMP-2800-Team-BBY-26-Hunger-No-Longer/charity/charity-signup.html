@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunger No Longer</title>
+    <!--Favicon-->
+    <link rel="icon" type='image/png' href="../img/favicon-32x32.png">
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <!--Own CSS Taken from Business Section of the Folders-->
+    <link rel="stylesheet" type="text/css" href="../Guang_Yang_busiOwner/css/template.css" />
+    <link rel="stylesheet" type="text/css" href="../Guang_Yang_busiOwner/css/busReg.css" />
+</head>
+
+<body>
+    <!--Head Nav bar starts-->
+    <ul class="nav nav-pills nav-fill navbar navbar-light bg-light fixed-top">
+        <div id="headingContainer">
+            <div id="hamburgerMenu">
+                <span id="menu" onclick="openNav()"><img src="https://img.icons8.com/material-two-tone/48/000000/menu--v4.png"/></span>
+            </div>
+            <div id="title">
+                <span id="title-font">Charity Registration</span>
+            </div>
+            <div id="homeButtonContainer">
+                <div id="homeButton">
+                    <img id="actualHomeButton" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAE10lEQVRoge2Zb0wTZxzHv3f39O4KHEiLs5VamAjVqSxR0ExWW9riZuKfTZMtMSZmmYnz1ZZs77eXvnDJXiwxezWzmGyLeyExWTIjQjKhBctksGlAQfwDDgFhWPv37p69gQWxpb320Mb0k9yb5+7355vn+9xzf4ACmeH3eo/5vd5jK12HWanEwf37i+RY7Ayl9Mh8kR+JKH7ScPFiOFXMZwcavkp6giVnv7kQGF2uHsmh15RcbW52KLFYKy8I1dWNjYRhWYz29HwQj0Te7tyz50DTpUt/pQj9sthoiHMcpy4MzIWiIiB3AFhWCKunAAAIeL1HCcf1lVosNQ6XSzBKEsTiYtTt3i2sstnWsar6h9/jOZ4qvta+ht/mWCcuHJnW1W1G2t1u0WgwnAZwwrZlCzHb7c+cZzkO9vp6UmIy4X5//5lAS4uHiOLx5aymBV1mpNvrrTPy/HVeEI7XOZ3PiViMyWaDw+kkvNF4SIlGB3qamzfr0UPOQvw+3yHKstfLLJYNDrdbMEpS2hhRklDndAqlFksVJaS3y+c7kmsfWVsrnZXSwRGC6m3buMcPHnD3+/t/CLS07PsFs9m2k52QQEtLLQO0GgRhffWOHSSTWUiFyWaDUZK4O8Hg4XdjpZiMqECJ9jyardXl8bzPAH2lVmttplZKh7GsDA6Xi1+72oLqoQjER1HNOTKekV/37hVMsvw1gBOVWVgpHRwheH17A6bv3QMGBiDMyJirzXxqMhLS6fFUEVVtNQjCxlytlA6z3Y6isjIMB6+B75tFicoixKpp47h0F3R5ve8RjmsrtVotNTt38ryY8R6VNQZRhNluR+zxv1g3J6Nc4e6fH77bvlxMymetxVbK5q6kC5RicnQUYzduUIZhflJDoY93+f2RZJcmFdLp8VQRQi4YBGFTdWOjLgs6F8Kzs7gTDCYUWb6lxGIHd3V03F56zXNCAj7fQTDMuVKrVayqrycsl9Z9LwQlHsfdvj7lyeRknFL60VttbT8vPv+/kHa3mxgNhlMAPn1pVkrHvNXGb95UQelZqbz85Obz5+PAvJCrPp+d57gLhOffyAcrpSM0PY3R3l5ZUdUhJZE40HTlyjALAIRlzxWtWrV14bE73ykxm7HR5SJiSYmDI+R7YH4fYSjlwrOz9EZ7R0xhOYEQ3V9TdEWWVXCqEqNygmUo5YB5IaqinGIotU5UVNWNrd38uXNnzcvtNA093cOoHP/72zUTI0NUVR8CS+5aX5z53Q3KtJ842vRyOsyQ7851AgxtPn3S2bEwlt8e0kBBSL6hy8eHyd7LeBT8LavY1xrewertvpx70EVIdGYC8qO72LBe29PA7ZF7iM5M6NGCfp+DiiUJb27dpCnm4eSMXuVfnTVSEJJvFITkGwUh+UZBSDYoioLBoRFMTT/WPfcLFXJreBTdwT60dXTpnvuFCqkwl0MQeFRaLbrnXpGfoamoMJvw4eF9K5L7lVnsSWdkOpzQlCSSUMFQqrk4pRSRhKq5XjKSC3mqLXE4rqA4ywbCcQXQWC8Zr4y1CkLyjaRrJPokrGnrlSNR49NQyPjnwE1NxZ+GQpAj0Uj0STjpz5tlMC0deEaIymCGpbjs7xrUlLViKry2AlJlcETrO7iEqX/CY1Ndg+MaA6Ey0O+FP5/4D7YgoDh6KDoxAAAAAElFTkSuQmCC"
+                    />
+                </div>
+            </div>
+        </div>
+    </ul>
+
+    <!--Head Nav bar ends-->
+    <div class="container-sm">
+        <!--Regitration hint starts-->
+        <div class="hint">
+            Please provide all the required information for verification
+        </div>
+        <!--Regitration hint ends-->
+
+        <!--Regitration form Starts-->
+        <form action="">
+            <fieldset>
+                <legend>Charity<span class="star">*</span></legend>
+                <span></span>
+                <input type="text" id="busname" name="busname" placeholder="Charity Name" autofocus="autofocus" pattern="[A-Za-z]{2,40}" required="required" />
+                <input type="number" id="phone" name="phone" placeholder="Phone Number" pattern="[A-Za-z]{6,20}" required="required" />
+            </fieldset>
+
+            </fieldset>
+            <fieldset>
+                <legend>Address<span class="star">*</span></legend>
+                <label for="inputAddress" class="form-label">Address 1</label>
+                <input type="text" class="inputAddress" id="inputAddress" placeholder="1234 Main St">
+
+                <label for="inputAddress" class="form-label ">Address 2</label>
+                <input type="text" class="inputAddress " id="inputAddress2" placeholder="">
+
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" id="inputCity" placeholder="Vancouver">
+
+                <label for="inputState">State</label>
+                <select id="inputState">
+                      <option selected>BC</option>
+                      <option>AB</option>
+                      <option>MB</option>
+                      <option>NB</option>
+                      <option>NL</option>
+                      <option>NT</option>
+                      <option>NS</option>
+                      <option>NU</option>
+                      <option>ON</option>
+                      <option>PE</option>
+                      <option>QC</option>
+                      <option>SK</option>
+                      <option>YT</option>
+                    </select>
+                <label for="inputZip">Zip</label>
+                <input type="text" id="inputZip" placeholder="V5G 3H2">
+
+            </fieldset>
+        </form>
+        <!--Regitration form ends-->
+        <div class="row row-cols-2">
+            <div class="col">
+                <button type="button" class="btn btn-primary btn-sm" id="submit">Submit</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-secondary btn-sm" id="reset">Reset</button>
+            </div>
+        </div>
+
+    </div>
+    <!--Fixed footer starts-->
+    <ul class="nav nav-pills nav-fill navbar fixed-bottom navbar-light bg-light" id="footer">
+        <li class="nav-item btn click-me" data-bs-toggle="tooltip" data-bs-placement="top" title="HOME">
+            <a class="nav-link" href="./BusNews.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="black" class="bi bi-house-door-fill click-me" viewBox="0 0 16 16" style="z-index: 1">
+                        <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                    </svg>
+                    <p style="margin: 0 0 0 0; padding: 0 0 0 0; color:black;">Home</p>
+                </a>
+        </li>
+    </ul>
+    <!--Fixed footer ends-->
+</body>
+
+</html>
+
+<!----------------------------------------------->
+<!-- JS: Boostrap, Firebase, API related    -->
+<!----------------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+<!--Own Js-->
+<script src="../private/firebase-api.js"></script>
+<script src="../charity/js/charity-reg.js"></script>
